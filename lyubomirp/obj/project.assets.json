@@ -12225,11 +12225,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\l_pet\\source\\repos\\lyubomirp\\lyubomirp\\lyubomirp.csproj",
+      "projectUniqueName": "C:\\Users\\l_pet\\Portfolio\\lyubomirp\\lyubomirp.csproj",
       "projectName": "lyubomirp",
-      "projectPath": "C:\\Users\\l_pet\\source\\repos\\lyubomirp\\lyubomirp\\lyubomirp.csproj",
+      "projectPath": "C:\\Users\\l_pet\\Portfolio\\lyubomirp\\lyubomirp.csproj",
       "packagesPath": "C:\\Users\\l_pet\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\l_pet\\source\\repos\\lyubomirp\\lyubomirp\\obj\\",
+      "outputPath": "C:\\Users\\l_pet\\Portfolio\\lyubomirp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

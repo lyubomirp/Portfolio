@@ -20,11 +20,13 @@
 
     <!-- Custom styles for this template -->
     <link href="~/css/css/grayscale.css?ver=4" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Scripts that need to be preloaded -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="~/js/particles.js" defer="defer"></script>
     <script src="~/js/site.js?ver=2"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 
@@ -87,7 +89,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 mb-3 mb-md-0">
+                <div class="col-md-4 mb-3 mb-md-0" data-aos="fade-up">
                     <div class="card py-4 h-100">
                         <div class="card-body text-center">
                             <a href="mailto:lpetkov44@yahoo.com">
@@ -107,10 +109,10 @@
             </div>
 
             <div class="social d-flex justify-content-center">
-                <a href="https://www.facebook.com/shitsgalore" target="_blank" class="mx-2">
+                <a href="https://www.facebook.com/shitsgalore" target="_blank" class="mx-2" data-aos="fade-up">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://github.com/lyubomirp?tab=repositories" target="_blank" class="mx-2">
+                <a href="https://github.com/lyubomirp?tab=repositories" target="_blank" class="mx-2" data-aos="fade-up">
                     <i class="fab fa-github"></i>
                 </a>
             </div>
@@ -133,6 +135,10 @@
     <!-- Custom scripts for this template -->
     <script src="~/css/js/grayscale.min.js"></script>
 
+    <!-- AOS Initiate -->
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
