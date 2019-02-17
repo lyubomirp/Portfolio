@@ -10,6 +10,14 @@ namespace lyubomirp.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly identity.Data.ApplicationDbContext _context;
+
+        public HomeController(identity.Data.ApplicationDbContext context)
+        {
+            _context = context;
+            ProjectsAndIDEs projectsAndIDEs = new ProjectsAndIDEs();
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -17,29 +25,20 @@ namespace lyubomirp.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            ProjectsAndIDEs projectsAndIDEs = new ProjectsAndIDEs();
+            projectsAndIDEs.Programs = _context.ProgramsList;
+            projectsAndIDEs.Technologies = _context.Summary;
+            return View(projectsAndIDEs);
         }
 
         public IActionResult Projects()
         {
-            return View();
+            var projects = _context.Projects.ToList();
+
+            return View(projects);
         }
 
         public IActionResult BrickBreak()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
         {
             return View();
         }

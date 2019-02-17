@@ -1,75 +1,49 @@
-﻿
+﻿@model List<lyubomirp.Models.Project>
+
 @{
     ViewData["Title"] = "Projects";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container-fluid projects-section" style="text-align:center">
-    <div class="row justify-content-center no-gutters mb-5 mb-lg-0" data-aos="fade-left">
-        <div class="col-lg-6">
-            <img class="img-fluid" src="~/images/blackseafriends.jpg" alt="">
-        </div>
-        <div class="col-lg-6">
-            <div class="bg-black text-center h-100 project">
-                <div class="d-flex h-100">
-                    <div class="project-text w-100 my-auto text-center text-lg-left">
-                        <h4 class="text-white"><a href="https://friends-blacksea.org/">Black Sea Friends</a></h4>
-                        <p class="mb-0 text-white-50">A Wordpress project (Avada theme) in which I touched up functionality, login issues, etc</p>
-                        <hr class="d-none d-lg-block mb-0 ml-0">
+    @for (int i = 0; i < Model.Count(); i++)
+    {
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0" data-aos="fade-left">
+            <div class="col-lg-6">
+                <img class="img-fluid" src="/images/@Model[i].ImagePath" alt="">
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white"><a href="@Model[i].ProjectLink" target="_blank">@Model[i].Title</a></h4>
+                            <p class="mb-0 text-white-50">@Model[i].Content</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row justify-content-center no-gutters" data-aos="fade-right">
-        <div class="col-lg-6">
-            <img class="img-fluid" src="~/images/bioshield.jpg" alt="">
-        </div>
-        <div class="col-lg-6 order-lg-first">
-            <div class="bg-black text-center h-100 project">
-                <div class="d-flex h-100">
-                    <div class="project-text w-100 my-auto text-center text-lg-right">
-                        <h4 class="text-white"><a href="https://bioshield-bg.com/">Bioshield</a></h4>
-                        <p class="mb-0 text-white-50">Another Wordpress project where I was tasked with fixing Woocommerce issues</p>
-                        <hr class="d-none d-lg-block mb-0 mr-0">
-
+        if (i+1 == Model.Count())
+        {
+            break;
+        }
+        i++;
+        <div class="row justify-content-center no-gutters" data-aos="fade-right">
+            <div class="col-lg-6">
+                <img class="img-fluid" src="/images/@Model[i].ImagePath" alt="">
+            </div>
+            <div class="col-lg-6 order-lg-first">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-right">
+                            <h4 class="text-white"><a href="@Model[i].ProjectLink" target="_blank">@Model[i].Title</a></h4>
+                            <p class="mb-0 text-white-50">@Model[i].Content</p>
+                            <hr class="d-none d-lg-block mb-0 mr-0">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row justify-content-center no-gutters mb-5 mb-lg-0" data-aos="fade-left">
-        <div class="col-lg-6">
-            <img class="img-fluid" src="~/images/studioNEXT.jpg" alt="">
-        </div>
-        <div class="col-lg-6">
-            <div class="bg-black text-center h-100 project">
-                <div class="d-flex h-100">
-                    <div class="project-text w-100 my-auto text-center text-lg-left">
-                        <h4 class="text-white"><a href="https://studionext.eu">Studio NEXT</a></h4>
-                        <p class="mb-0 text-white-50">Wordpress website which I redesigned using Elated themes' Kodell portfolio template</p>
-                        <hr class="d-none d-lg-block mb-0 ml-0">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row justify-content-center no-gutters" data-aos="fade-right">
-        <div class="col-lg-6">
-            <img class="img-fluid" src="~/images/brickbreak.jpg" alt="">
-        </div>
-        <div class="col-lg-6 order-lg-first">
-            <div class="bg-black text-center h-100 project">
-                <div class="d-flex h-100">
-                    <div class="project-text w-100 my-auto text-center text-lg-right">
-                        <form target="popup" asp-action="BrickBreak" onsubmit="window.open('', this.target, 'width=890,height=600,resizable,scrollbars=yes'); return true;">
-                            <h4><input style="border:none;background: none;color:#64a19d;cursor:pointer;" type="submit" value="Brick break" /></h4>
-                         </form>                    
-                        <p class="mb-0 text-white-50">The very first thing I made with Unity. It's not really... good. But I've had a lot of fun putting it together</p>
-                        <hr class="d-none d-lg-block mb-0 mr-0">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    }
 </div>

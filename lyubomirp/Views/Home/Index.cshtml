@@ -1,9 +1,13 @@
-﻿<div class="col-lg-3 mx-auto projects-section" data-aos="fade-up">
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<div class="col-lg-3 mx-auto projects-section" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
     <h2 class="mb-4">Hey there!</h2>
-    <p>
+    <p id="introContent">
         Welcome to my website!
+        </br>My name is Lyubo and this is my portfolio-thing
+        It's a very lightly modified version of the Bootstrap Greyscale template
+        (<a href="https://startbootstrap.com/previews/grayscale/">link</a>)
     </p>
-    <p> My name is Lyubo and this is my portfolio-thing</p>
-    <p>It's a very lightly modified version of the Bootstrap Greyscale template</p>
-    <p>(<a href="https://startbootstrap.com/previews/grayscale/">link</a>)</p>
 </div>

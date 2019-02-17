@@ -4,6 +4,23 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
  */
 
+
+::-webkit-scrollbar{
+    width:100px;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 5px;
+}
+
 #mainNav {
   min-height: 56px;
   background-color: #fff;
@@ -26,10 +43,12 @@
   padding: .9rem 0;
 }
 
+
+
 #mainNav .navbar-nav .nav-item:hover {
-  color: fade(white, 80%);
-  outline: none;
-  background-color: transparent;
+    color: fade(white, 80%);
+    outline: none;
+    background-color: transparent;
 }
 
 #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
@@ -131,13 +150,7 @@ canvas {
     animation-name: slideInDown;
 }
 
-h4:hover{
-    color: black;
-}
 
-input{
-    outline:none;
-}
  
 
 @-webkit-keyframes slideInUp {
@@ -386,3 +399,4 @@ a:focus, a:hover {
 footer {
   padding: 5rem 0;
 }
+

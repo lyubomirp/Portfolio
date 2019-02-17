@@ -1,23 +1,26 @@
-﻿<div class="container-fluid projects-section" style="text-align:center">
+﻿@model lyubomirp.Models.ProjectsAndIDEs
+<div class="container-fluid projects-section" style="text-align:center">
     <h1>About me</h1>
-    <div style="text-align:left" data-aos="fade-up">
+    <div style="text-align:left" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
         <p style="line-height: 2em">
-            I'm a 25 year old wannabe-developer living in Sofia, Bulgaria. I've graduated Lomonosov studing cinema, audio and video tech. 
-            I've also studied Logistics Engineering in the Techical University of Sofia.
+            I'm a 25 year old wannabe-developer living in Sofia, Bulgaria. I've graduated Lomonosov studing cinema, audio and video tech and Logistics Engineering in the Techical University of Sofia.
 
-            I've had an interest in programming and computers ever since I was young but for some reason got detached from it.
+        <p> I've had an interest in programming and computers ever since I was young but for some reason got detached from it. </p>
 
+        <p>
             A little more than a year ago I started taking lectures at <a href="https://softuni.bg/">
                 SoftUni
             </a>. Since then I've taken more than 6 courses which
 
             include PHP, Javascript and Java. Mostly focusing on Microsoft technologies (ASP.NET/core and .NET/core).
+        </p>
 
+        <p>
             I've listed everything (including frameworks, engines, etc.) that I enjoy working with in the bottom toggle.
 
             More of a models and controllers person than a frontend dev (Kind of why I used a template)
 
-            As you may have guessed most of my experience programming is related to web development. But I throughtly enjoy working on anything .NET related. Have even worked on some very 
+            As you may have guessed most of my experience programming is related to web development. But I throughtly enjoy working on anything .NET related. Have even worked on some very
             small Windows Forms, WPF apps and a Unity game I have up on this very site (although, to be fair, "game" is a pretty strong word).
         </p>
         <p>
@@ -25,71 +28,32 @@
 
         </p>
     </div>
-    <p class="buttons" data-aos="fade-up">
-        <a class="btn btn-primary" onclick="button1Fun()" style="margin: 20px;color:white" data-toggle="collaps" role="button" aria-expanded="false" aria-controls="collapseExample">
+    <p class="buttons">
+        <a data-aos="fade-up" data-aos-delay="400" data-aos-duration="500" class="btn btn-primary" onclick="button1Fun()" style="margin: 20px;color:white" data-toggle="collaps" role="button" aria-expanded="false" aria-controls="collapseExample">
             What I've worked with
         </a>
-        <a class="btn btn-primary" onclick="button2Fun()" style="margin: 20px;color:white;" data-toggle="collaps" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <a data-aos="fade-up" data-aos-delay="400" data-aos-duration="500" class="btn btn-primary" onclick="button2Fun()" style="margin: 20px;color:white;" data-toggle="collaps" role="button" aria-expanded="false" aria-controls="collapseExample">
             Software I've fiddled with
         </a>
     </p>
-    <div class="collapse" id="collapse1">
+    <div class="collapse" id="collapse1" >
         <div class="card card-body">
-            <p>
-                PHP 7.0 - PHP Symfony 3.4
-            </p>
-            <p>
-                JavaScript - ExpressJS & NodeJS
-            </p>
-            <p>
-                JDK 10.0.2 - SpringBoot v4.3
-            </p>
-            <p>
-                .NET Framework 4.7/.NET Core 2.2 - ASP.NET/ASP.NET Core
-            </p>
-            <p>
-                CSS 3
-            </p>
-            <p>
-                Bootstrap v4.7
-            </p>
-            <p>
-                MySQL
-            </p>
-            <p>
-                Wordpress
-            </p>
+            @foreach (var languages in Model.Technologies)
+            {
+                <p>
+                    @languages.technologies
+                </p>
+            }
         </div>
     </div>
     <div class="collapse" id="collapse2">
         <div class="card card-body">
-            <p>
-                PhpStorm
-            </p>
-            <p>
-                WebStorm
-            </p>
-            <p>
-                IntelliJ IDEA
-            </p>
-            <p>
-                JetBrains Rider & Visual Studio
-            </p>
-            <p>
-                SQL Server Management Studio
-            </p>
-            <p>
-                AutoHotKey
-            </p>
-            <p>
-                Visual Studio Code
-            </p>
-            <p>
-                XAMPP
-            </p>
-            <p>
-                Unity
-            </p>
+            @foreach (var ides in Model.Programs)
+            {
+                <p>
+                    @ides.programsAndIDEs
+                </p>
+            }
         </div>
     </div>
 </div>
@@ -108,7 +72,7 @@
             button1.className = "collapse show";
             button2.className = "collapse";
         }
-         
+
     }
 
     function button2Fun() {
@@ -121,6 +85,6 @@
             button1.className = "collapse";
             button2.className = "collapse show";
         }
-         
+
     }
 </script>
