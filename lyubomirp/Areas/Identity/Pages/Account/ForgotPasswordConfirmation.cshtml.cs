@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 namespace lyubomirp.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
+    [Authorize]
     public class ForgotPasswordConfirmation : PageModel
     {
         public void OnGet()

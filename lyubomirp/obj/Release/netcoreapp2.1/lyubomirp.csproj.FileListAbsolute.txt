@@ -124,3 +124,5 @@ C:\Users\l_pet\Portfolio\lyubomirp\obj\Release\netcoreapp2.1\lyubomirp.Views.pdb
 C:\Users\l_pet\Portfolio\lyubomirp\obj\Release\netcoreapp2.1\lyubomirp.dll
 C:\Users\l_pet\Portfolio\lyubomirp\obj\Release\netcoreapp2.1\lyubomirp.pdb
 C:\Users\l_pet\Portfolio\lyubomirp\obj\Release\netcoreapp2.1\lyubomirp.csproj.CopyComplete
+C:\Users\l_pet\Portfolio\lyubomirp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ForgotPassword.g.cshtml.cs
+C:\Users\l_pet\Portfolio\lyubomirp\obj\Release\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ResetPasswordConfirmation.g.cshtml.cs
