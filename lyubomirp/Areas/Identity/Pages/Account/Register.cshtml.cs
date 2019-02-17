@@ -56,11 +56,13 @@ namespace lyubomirp.Areas.Identity.Pages.Account
             public string ConfirmPassword { get; set; }
         }
 
+        [Authorize]
         public void OnGet(string returnUrl = null)
         {
             ReturnUrl = returnUrl;
         }
 
+        [Authorize]
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl = returnUrl ?? Url.Content("~/");
